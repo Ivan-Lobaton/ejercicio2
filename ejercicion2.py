@@ -67,7 +67,7 @@ print("Números para el ejemplo:", num5, "y", num6)
 
 #Se crea ejemplos de los operadores de lógicos.
 print("¿7 es mayor que 5 y 14 es menor que 20?:", num5 > 5 and num6 < 20) #Se utiliza "and" si ambas condiciones son verdaderas.
-print("¿7 es mayor que 10 y 14 es menor que 16?:", num5 > 10 or num6 < 16) #Se utiliza "or" si al menos una condición es verdadera.
+print("¿7 es mayor que 10 o 14 es menor que 16?:", num5 > 10 or num6 < 16) #Se utiliza "or" si al menos una condición es verdadera.
 print("¿14 es menor que 10?:", not(num6 < 10), "\n") #Se utiliza not() para invertir el valor lógico.
 
 ##############################################################################################################################################
@@ -178,13 +178,16 @@ num20 = 7
 
 print("Número para el ejemplo:", num20)
 
-#Se imprime por consola el resultado de las operaciones.
+#La estructura "for" itera sobre una secuencia (como una lista o rango).
 for i in range(5): # 0 a 4
+    #Se imprime por consola el resultado de la operacion.
     print(i)
 
 print() #Salto de linea.
 
+#La estructura "while" repite el bloque mientras la condición sea verdadera.
 while num20 < 14:
+    #Se imprime por consola el resultado de la operacion.
     print(num20)
     num20 += 1
 
@@ -199,15 +202,17 @@ num21 = 5
 
 print("Número para el ejemplo:", num21)
 
-#Se imprime por consola el resultado de las operaciones.
+
 try:
     resultado = num21 / 0
+    #Se imprime por consola el resultado de la operacion, y si ocurre una excepción, ejecuta el bloque "except".
 except ZeroDivisionError:
     print("No se puede dividir por cero")
 
 try:
     resultado = num21 / 0
+    #Se imprime por consola el resultado de la operacion sin importar si ocurrió una excepción o no.
 except ZeroDivisionError:
     print("No se puede dividir por cero")
 finally:
-    print("Esto siempre se ejecuta")
+    print("Esto siempre se ejecuta:", num21)
